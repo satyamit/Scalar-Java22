@@ -39,7 +39,7 @@ public class Function1 {
             float num = 3.124f;
             return (int) num;
         }
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         System.out.println("Function 1");
         //call a function
         greet();

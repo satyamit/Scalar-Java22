@@ -1,0 +1,29 @@
+Q) Given a number, find the number of factors?
+
+1+2+3+...+99+100
+n*(n+1)/2
+100*101/2=5050
+
+its Gauss story
+
+........................
+Q2) Sum of N whole numbers?
+whole numbers starts from 0 so N whole numbers are
+
+0, 1, 2, 3, .... N-1
+n-1(n-1+1)/2 = (n-1)*(n)/2 = n(n-1)/2
+Ans - n*(n-1)/2
+
+//...........................
+
+Q3)Given a number divide it by 2 until you reach 1 -- Ans : log N base 2
+5 by2-> 2 by2-> 1 (2 divisions) = log 5 base 2 = 2.12344
+9 by2-> 4 by2-> 2 by2-> 1 (3 divisions) = log 9 base 2 = 3.17
+15 by2-> 7 by2-> 3 by2-> 1 (3 divisions) = log 15 base 2 = 3.90
+
+......................
+2 by2 1 (1 divisions)
+4 by2 2 by2 1 (2 divisions)
+8 by2 4 by2 2 by2 1 (3 divisions)
+
+so log2 ^ 8 = 3

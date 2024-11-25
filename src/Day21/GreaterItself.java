@@ -1,6 +1,7 @@
 package Day21;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class GreaterItself {
     /*Problem 1
@@ -87,7 +88,13 @@ public class GreaterItself {
             j--;
         }
         System.out.println(Arrays.toString(arr));
-        int first_start=0, first_end=arr.length-k-1,second_start=first_end+1,second_end=arr.length-1;
+        int first_start=0, first_end=k-1 ,second_start=first_end+1,second_end=arr.length-1;
+
+//        if(first_end%2==0){
+//           first_end= arr.length-k-1;
+//        }else{
+//            first_end= arr.length-k;
+//        }
         int temp_first=0;
         int temp_second=0;
         while(first_start<first_end){
@@ -106,6 +113,9 @@ public class GreaterItself {
             second_end--;
         }
         System.out.println(Arrays.toString(arr));
+        for(int index=0;index<arr.length;index++){
+            System.out.print(arr[index]+" ");
+        }
     }
 
 
@@ -123,9 +133,25 @@ public class GreaterItself {
         int[] arr4 = {2,3,4,5,7,8,9};
         Problem4(arr4,2,5);
 
-        int[] arr5 = {1,2,3,4,5,6,7,8};
+        int[] arr5 = {1,2,2};
         Problem5(arr5,3);
 
 //      8 7 6 5 4 3 2 1
+
+        //Assignments
+        /*
+         *1. Given an integer array A of size N and an integer B,
+         * you have to print the same array after rotating it B times towards the right.
+
+         * */
+        System.out.println("Enter an Number of Array count:");
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] A = new int[N];
+        for(int i = 0;i<N;i++){
+            A[i] = sc.nextInt();
+        }
+        int B = sc.nextInt();
+        Problem5(A,B);
     }
 }

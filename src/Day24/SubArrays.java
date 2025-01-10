@@ -59,8 +59,9 @@ public class SubArrays {
             System.out.println();
         }
     }
-    public static void SubArray9(int[] demoArr){
+    public static void SubArray9(int[] demoArr,int num){
         int max = 0;
+        int count = 0;
         for(int start = 0;start<demoArr.length;start++){
             for(int end = start;end<demoArr.length;end++){
                 int sum = 0;
@@ -70,12 +71,16 @@ public class SubArrays {
                     if(sum>max){
                         max = sum;
                     }
+                    if(sum<num){
+                        count++;
+                    }
                 }
                 System.out.print("sum: "+sum);
                 System.out.println();
             }
         }
         System.out.println("Max Sum of Subarray: "+max);
+        System.out.println("Less than 10 sum: "+count);
     }
     public static void main(String[] args) {
         /*
@@ -127,9 +132,9 @@ public class SubArrays {
         * Problem Statement - 10
         * Find max sum Subarray?
         * */
-        int[] demoArr12 = {3,4,5,-1};
-        SubArray9(demoArr12);
+        int[] demoArr12 = {2,5,6};
+        SubArray9(demoArr12,10);
 
-        
+
     }
 }
